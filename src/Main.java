@@ -2,16 +2,32 @@
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        CloudManager asistent = new CloudManager();
+        ICloudService CloudStorage = new CloudStorage(50,100);
+        ICloudService CloudStorage2 = new CloudStorage(55,0);
+        ICloudService CloudCompute = new CloudCompute(15, 0);
+        ICloudService CloudCompute2 = new CloudCompute(20, 0);
+        asistent.pridejSluzbu(CloudStorage);
+        asistent.pridejSluzbu(CloudStorage2);
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+        asistent.pridejSluzbu(CloudCompute);
+        asistent.pridejSluzbu(CloudCompute2);
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+        asistent.spustVsechnySluzb();
+        asistent.zastavVsechnySluzby();
+        asistent.spustVsechnySluzb();
+        asistent.zastavVsechnySluzby();
+        asistent.spustVsechnySluzb();
+        asistent.zastavVsechnySluzby();
+        asistent.spustVsechnySluzb();
+        asistent.zastavVsechnySluzby();
+        asistent.spustVsechnySluzb();
+        asistent.zastavVsechnySluzby();
+        asistent.spustVsechnySluzb();
+        asistent.zastavVsechnySluzby();
+
+        asistent.vypisNaklady(50);
+        asistent.vypisInformace();
+
     }
 }
